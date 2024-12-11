@@ -1,0 +1,192 @@
+<DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible"contnet="IE-edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>personal portfolio</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div id="header">
+                <div class="container">
+                    <nav>
+                        <img src="images/logo.jpg"class="logo">
+                        
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                            
+                        </ul>
+                    </nav>
+                    <div class="header-text">
+                        <h1>Software engineer</h1>
+                        <h2>Hi,I'm <span>Hariharan</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/imagge1.jpg">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About me</h1>
+                            <p>
+                                Hello! I am a passionate software engineer with a 
+                                strong foundation in designing, developing, and optimizing innovative
+                                software solutions. With expertise. I thrive on tackling challenges and delivering impactful 
+                                results. My work is driven by a commitment to quality and efficiency, ensuring that each project not only meets but exceeds expectations. Outside of coding, I enjoy [mention hobbies or interests, e.g., exploring new technologies, contributing to open-source projects, or engaging in continuous learning]. Thank you for visiting my portfolio, where you’ll find a collection of my professional journey and accomplishments.
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+        
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                <li><span>c,c++,java</span><br>website developing</li>
+                                <li><span>Canva</span><br>photoshop</li>
+                                <li><span>Video-editting</span><br>Adobe Premiere Pro</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>App Development</span><br>Application Interfaces</li>
+                                    <li><span>Web Development</span><br>Web App Development</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2023-27</span><br>Veltech Multitech engineering college</li>
+                                    <li><span>2022-23</span>ST.Joseph<br></li>
+                                    <li><span>2020-21</span><br>ST.Joseph</li>
+        
+        
+                                </ul>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+            <!------------------services-------->
+            <div id="services">
+                <div class="container">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <h2>Web Design</h2>
+                            <p>I offer professional web design and development services tailored to bring your vision to life. With a focus on both functionality and aesthetics, I ensure your website not only looks great but also delivers an exceptional user experience.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <h2>Web App developing</h2>
+                            <p>I specialize in designing and developing robust, scalable, and user-friendly web applications to meet your business needs. With a deep understanding of modern technologies and frameworks, I deliver solutions that are both efficient and impactful.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <h2>Android app design</h2>
+                            <p>I provide end-to-end Android app development services to help bring your ideas to life on the world’s most widely used mobile platform. With a focus on functionality, performance, and user experience, I deliver custom solutions that drive engagement and meet your business objectives.</p>
+                            <a href="#">learn more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    for(var tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for(var tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+       <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> hariharan36123@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>91 6383277562</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/hariharan___10/"></a><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Hariharan. Made by S.Hariharan.</p>
+        </div>
+    </div>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+
+        }
+
+
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzfrZc0Kd2hkIHYHP3mzOHpAJDrb-rJzmUe9ZrIZ9AKNzgAOSY40zvP5GP7_aOJhY9G-A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        
+        const msg=document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully."
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+                    
+
+
+        </body>
+
+
+    </html>
